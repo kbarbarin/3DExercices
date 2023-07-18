@@ -52,12 +52,12 @@ function App() {
 
 
   React.useEffect(() => {
-  // Render
+    // Render
 
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current
     });
-  
+
     renderer.setSize(window.innerWidth, window.innerHeight - 50);
     renderer.render(scene, camera);
 
@@ -111,19 +111,19 @@ function App() {
   const playSong = async (notesSequences) => {
     for (var i = 0; i != notesSequences.length; i++) {
       if (notesSequences[i] === 'a')
-      animation(notes.children[0], "C4");
+        animation(notes.children[0], "C4");
       else if (notesSequences[i] === 'z')
-      animation(notes.children[1], "D4");
+        animation(notes.children[1], "D4");
       else if (notesSequences[i] === 'e')
-      animation(notes.children[2], "E4");
+        animation(notes.children[2], "E4");
       else if (notesSequences[i] === 'r')
-      animation(notes.children[3], "F4");
+        animation(notes.children[3], "F4");
       else if (notesSequences[i] === 't')
-      animation(notes.children[4], "G4");
+        animation(notes.children[4], "G4");
       else if (notesSequences[i] === 'y')
-      animation(notes.children[5], "A4");
+        animation(notes.children[5], "A4");
       else if (notesSequences[i] === 'u')
-      animation(notes.children[6], "B4");
+        animation(notes.children[6], "B4");
       await delay(500);
     }
   }
@@ -131,7 +131,10 @@ function App() {
   return (
     <div>
       <canvas ref={canvasRef} />
-      <button onClick={startAudioContext}>Start Audio</button>
+      <div style={{display: 'flex'}}>
+        <button onClick={startAudioContext}>Start Audio</button>
+        <h3>Utiliser les touches de 'a' à 'u' pour jouer</h3>
+      </div>
     </div>
   )
 }
