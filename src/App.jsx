@@ -5,7 +5,7 @@ import * as Tone from 'tone';
 // songs
 
 // first song test
-const firstSong = ["a", "a", "a", "z", "e", "z", "a"]
+const firstSong = ["a", "a", "a", "z", "e", "z", "a", "e", "z", "z", "a"]
 
 function App() {
   const canvasRef = React.useRef(null);
